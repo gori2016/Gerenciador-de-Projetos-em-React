@@ -1,13 +1,15 @@
 .container{
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     flex-wrap: wrap;
+
 }
 
 .min-height{
-    flex: 1;
+   min-height: calc(100vh - 160px);
 }
 
 .app {
@@ -25,3 +27,4 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
