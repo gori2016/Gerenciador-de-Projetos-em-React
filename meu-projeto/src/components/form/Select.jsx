@@ -8,7 +8,7 @@ function Select({ text, handleOnChange, name, value, options }) {
                 {// Deixando os inputs em componentes e dinamicos
                 }
 
-               <select className='form-select' name="name" id="name">
+               <select className='form-select' name="name" onChange={handleOnChange} value={value || ""} id="name">
                <option  selected>Selecione uma opção</option>
                {options.map((option)=>(
                 <option value={option.id} key={option.id}>{option.name}</option>
