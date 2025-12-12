@@ -10,6 +10,9 @@ function Select({ text, handleOnChange, name, value, options }) {
 
                <select className='form-select' name="name" id="name">
                <option  selected>Selecione uma opção</option>
+               {options.map((option)=>(
+                <option value={option.id} key={option.id}>{option.name}</option>
+               ))}
             </select>
                 
             </div>
