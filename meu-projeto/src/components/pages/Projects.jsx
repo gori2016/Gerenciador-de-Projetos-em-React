@@ -1,16 +1,25 @@
 import Message from "../layout/Message"
 import { useLocation } from "react-router-dom"
+import styles from "./Projects.module.css"
+import Container from "../layout/Container"
+import LinkButtom from "../layout/LinkButtom"
 
-function Projects(){
+function Projects() {
     const location = useLocation()
     let mensage = ""
-    if(location.state){
+    if (location.state) {
         mensage = location.state.message
     }
-    return(
-        <div>
-            <h1>Meus Projetos</h1>
+    return (
+        <div className={styles.project_container}>
+            <div className={styles.title_container}>
+                <h1>Meus Projetos</h1>
+                <LinkButtom to="/newproject" text="Criar Projeto" />
+            </div>
             {mensage && <Message type="success" msg={mensage} />}
+            <Container customClass="start">
+                <p>Projetos</p>
+            </Container>
         </div>
     )
 }
