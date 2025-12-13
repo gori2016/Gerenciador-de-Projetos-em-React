@@ -38,7 +38,20 @@ useEffect(() => {
   }, 1000)
 }, [])
 
-
+function removeProject(id) {
+  fetch(`http://localhost:5000/projects/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((resp) => resp.json())
+    .then(() => {
+      setProjects(projects.filter((project) => project.id !== id))
+      //messagem
+    })
+    .catch((err) => console.log(err))
+}
     
 
   return (
@@ -58,6 +71,7 @@ useEffect(() => {
               category={project.category?.name}
               id={project.id}
               key={project.id}
+              handleRemove={removeProject}
 
             />
               ))}
