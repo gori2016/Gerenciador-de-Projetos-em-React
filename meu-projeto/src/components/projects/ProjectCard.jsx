@@ -1,11 +1,33 @@
 import styles from './ProjectCard.module.css';
+import { Link } from 'react-router-dom';
 import { BsFillTrashFill, BsPencil } from 'react-icons/bs';
-function ProjectCard({id, name, budget, category, handleRemove}) {
-    return(
-        <div>
+function ProjectCard({ id, name, budget, category = "outros", handleRemove }) {
+    return (
+        <div className={styles.project_card}>
+            <h4>{name}</h4>
 
+            <p>
+                <span>Orçamento: R$ {budget}</span>
+            </p>
+
+            <p className={styles.category_text}>
+                <span className={styles[category.toLowerCase()]}>
+                    Categoria: {category}
+                </span>
+            </p>
+
+            <div className={styles.project_card_actions}>
+                <Link to={`/project/${id}`}>
+                    <BsPencil /> Editar
+                </Link>
+
+                <button onClick={() => handleRemove(id)}>
+                    <BsFillTrashFill /> Excluir
+                </button>
+            </div>
         </div>
-    )
+            )
 }
 
-export default ProjectCard;
+
+            export default ProjectCard;

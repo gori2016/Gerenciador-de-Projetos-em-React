@@ -1,0 +1,92 @@
+.project_card {
+  padding: 1.5em;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 280px;
+  margin: 1em;
+}
+
+.project_card h4 {
+  background-color: #222;
+  color: #ffbb33;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.project_card p {
+  color: #555;
+  margin-bottom: 0.8em;
+}
+
+.category_text {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.category_text span {
+  display: flex;
+  align-items: center;
+}
+
+.category_text span::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 5px;
+}
+
+/* categorias */
+.category_text .design::before {
+  background-color: #f1c40f;
+}
+
+.category_text .desenvolvimento::before {
+  background-color: #2ecc71;
+}
+
+.category_text .planejamento::before {
+  background-color: #95a5a6;
+}
+
+.category_text .infra::before {
+  background-color: #e74c3c;
+}
+.project_card_actions {
+  display: flex;
+  gap: .8em;
+}
+
+
+
+.project_card_actions a,
+.project_card_actions button{
+    border: none;
+    padding: .6em 1em;
+    text-decoration: none;
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+    margin-right: 1em;
+    font-size: .9em;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+
+.project_card_actions svg{
+    margin-right: .5em;
+}
+
+.project_card_actions a:hover,
+.project_card_actions button:hover{
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #222;
+}

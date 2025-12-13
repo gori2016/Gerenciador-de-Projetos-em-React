@@ -53,6 +53,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "d71a",
+      "name": "Desenvolvimento 1 ",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
